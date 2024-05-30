@@ -155,7 +155,7 @@ public:
 
 int main() {
 	setlocale(0, "");
-	// Создаем объекты обработчиков платежей
+	// cоздаём объекты обработчиков платежей
 	PaymentHandler* handler = new BasePaymentHandler();
 	PaymentHandler* isBigSum = new BigMoneyPaymentHandler();
 	PaymentHandler* hasComment = new CommentPaymentHandler();
@@ -171,7 +171,7 @@ int main() {
 	GetSystemTime(&time);
 	payment.date = time;
 	payment.money = 1000;
-	payment.comment = "оплата аренды помещения на основании договора №17 от 12.01.2023";
+	payment.comment = "оплата аренды помещения за май на основании договора №17 от 12.04.2024";
 	
 	// Обрабатываем платеж
 	handler->handlePayment(payment);
